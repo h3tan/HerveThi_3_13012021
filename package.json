@@ -1,0 +1,19 @@
+{
+  "name": "hervethi_3_13012021",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch SASS/style.scss:CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h3tan/HerveThi_3_13012021.git"
+  },
+  "author": "Hervé Thi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h3tan/HerveThi_3_13012021/issues"
+  },
+  "homepage": "https://github.com/h3tan/HerveThi_3_13012021#readme"
+}
