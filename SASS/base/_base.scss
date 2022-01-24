@@ -1,0 +1,13 @@
+/* Dimensions par défaut adaptées aux mobiles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @include police-texte;
+  width: 100%;
+  margin: auto;
+}

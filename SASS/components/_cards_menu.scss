@@ -1,0 +1,64 @@
+.cards_menu {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  @include border-shadow(gray);
+  transition: all 2s;
+  &__detail {
+    width: 80%;
+    margin-left: 10px;
+    h3 {
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__price {
+      width: 40px;
+      transition: all 1.5ms;
+    p {
+      font-weight: bold;
+      margin-top: 33px;
+      margin-bottom: 0;
+    }
+  }
+  i {
+    color: white;
+  }
+  &__validation {
+    width: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-tertiary;
+    border-radius: 0 15px 15px 0;
+    transition: all 1s;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover > &__detail {
+    width: 60%;
+  }
+  &:hover > &__validation {
+      width: 60px;
+      margin-left: 0;
+  }
+  &:hover > &__price {
+    margin-right: 0;
+  }
+}

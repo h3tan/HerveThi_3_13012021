@@ -1,0 +1,60 @@
+#localisation {
+  display: flex;
+  @include center;
+  background-color: $color-background;
+  font-size: 14px;
+  i {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
+
+#explore {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-background-light;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  text-align: center;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  p {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+#menu {
+  margin-bottom: 50px;
+  background-color: white;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+  }
+}
+
+#restaurants {
+  background-color: $color-background-light;
+  padding-top: 40px;
+  h2 {
+    margin-left: 20px;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    @include center;
+    padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,20 @@
+@mixin police-logo {
+  font-family: "Shrikhand", cursive, Arial, Helvetica, sans-serif;
+}
+@mixin police-texte {
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border-shadow($color-shadow) {
+  box-shadow: 1px 1px 12px $color-shadow;
+}

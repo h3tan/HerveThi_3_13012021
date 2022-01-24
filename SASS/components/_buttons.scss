@@ -1,0 +1,26 @@
+.btn_standard {
+  display: flex;
+  @include center;
+  background: linear-gradient(to top left, $color-primary, $color-secondary);
+  height: 50px;
+  margin: auto;
+  border-radius: 25px;
+  @include border-shadow($color-shadow1);
+  transition: filter 300ms ease-in-out, box-shadow 200ms 100ms;
+  a {
+    text-decoration: none;
+    color: $color-police-standard;
+  }
+  &--explore {
+    width: 60%;
+  }
+  &--order {
+    width: 40%;
+    border: transparent;
+    color: $color-police-standard;
+  }
+  &:hover {
+    filter: brightness(110%);
+    @include border-shadow($color-shadow2);
+  }
+}
