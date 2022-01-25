@@ -275,37 +275,41 @@ body {
 }
 
 .cards_menu {
+  position: relative;
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
   width: 90%;
   margin-bottom: 20px;
   border-radius: 15px;
   box-shadow: 1px 1px 12px gray;
-  transition: all 2s;
 }
 .cards_menu__detail {
-  width: 80%;
+  width: 77%;
   margin-left: 10px;
+  transition: all 500ms;
 }
 .cards_menu__detail h3 {
   font-size: 16px;
   margin-top: 10px;
   margin-bottom: 5px;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .cards_menu__detail p {
   font-size: 14px;
   margin-top: 5px;
   margin-bottom: 10px;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .cards_menu__price {
+  position: absolute;
   width: 40px;
-  transition: all 1.5ms;
+  right: 10px;
+  transition: all 500ms;
+  transition-delay: 50ms;
 }
 .cards_menu__price p {
   font-weight: bold;
@@ -316,27 +320,31 @@ body {
   color: white;
 }
 .cards_menu__validation {
-  width: 0;
-  overflow: hidden;
+  position: absolute;
   display: flex;
+  width: 60px;
+  height: 100%;
+  right: -60px;
   justify-content: center;
   align-items: center;
   background-color: #99e2d0;
-  border-radius: 0 15px 15px 0;
-  transition: all 1s;
+  transition: all 500ms;
 }
 .cards_menu:hover {
   cursor: pointer;
 }
 .cards_menu:hover > .cards_menu__detail {
-  width: 60%;
-}
-.cards_menu:hover > .cards_menu__validation {
-  width: 60px;
-  margin-left: 0;
+  width: 57%;
 }
 .cards_menu:hover > .cards_menu__price {
-  margin-right: 0;
+  transform: translate(-60px, 0);
+}
+.cards_menu:hover .cards_menu__validation {
+  transform: translate(-60px, 0);
+}
+.cards_menu:hover i {
+  transform: rotate(1turn);
+  transition: all 700ms;
 }
 
 footer {

@@ -18,3 +18,9 @@
 @mixin border-shadow($color-shadow) {
   box-shadow: 1px 1px 12px $color-shadow;
 }
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
