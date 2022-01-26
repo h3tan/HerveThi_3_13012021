@@ -9,7 +9,6 @@
   @include border-shadow(gray);
   font-size: 16px;
   &__num {
-    display: flex;
     @include center;
     position: absolute;
     width: 20px;

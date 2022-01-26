@@ -28,7 +28,7 @@
     width: 40px;
     right: 10px;
     transition: all 500ms;
-    transition-delay: 50ms;
+    transition-delay: 80ms;
     p {
       font-weight: bold;
       margin-top: 33px;
@@ -37,14 +37,14 @@
   }
   i {
     color: white;
+    font-size: 25px;
   }
   &__validation {
     position: absolute;
-    display: flex;
+    @include center;
     width: 60px;
     height: 100%;
     right: -60px;
-    @include center;
     background-color: $color-tertiary;
     transition: all 500ms;
   }
@@ -57,7 +57,7 @@
   &:hover > &__price {
     transform: translate(-60px, 0);
   }
-  &:hover  &__validation {
+  &:hover >&__validation {
     transform: translate(-60px, 0);
   }
   &:hover i {

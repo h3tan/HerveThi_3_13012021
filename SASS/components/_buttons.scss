@@ -1,5 +1,4 @@
 .btn_standard {
-  display: flex;
   @include center;
   background: linear-gradient(to top left, $color-primary, $color-secondary);
   height: 50px;

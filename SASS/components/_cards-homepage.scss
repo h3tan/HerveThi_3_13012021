@@ -20,7 +20,6 @@
     }
   }
   &__new {
-    display: flex;
     @include center;
     position: absolute;
     background-color: $color-new--background;
@@ -47,14 +46,24 @@
       margin-top: 5px;
     }
     &__like {
-      padding-top: 20px;
-    }
-    i {
-      font-size: 20px;
-      color: black;
-      &:hover {
+      position: relative;
+      width: 25px;
+      height: 25px;
+      margin-top: 20px;
+      i {
+        font-size: 25px;
+        color: black;
+      }
+      i:nth-child(2) {
+        position: absolute;
+        left: 0;
         font-weight: bold;
+        transform: scale(0);
+        transition: all 500ms;
+      }
+      &:hover > i:nth-child(2) {
         color: $color-primary;
+        transform: scale(0.84);
       }
     }
   }

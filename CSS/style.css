@@ -38,6 +38,7 @@ body {
 
 #localisation {
   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #e7dede;
@@ -94,6 +95,7 @@ body {
 #restaurants__container {
   display: flex;
   flex-wrap: wrap;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 40px;
@@ -124,7 +126,18 @@ body {
   background-color: #f8f6f6;
 }
 #restaurant_title i {
-  font-size: 20px;
+  font-size: 25px;
+}
+#restaurant_title i:nth-child(2) {
+  position: absolute;
+  right: 40.22px;
+  font-weight: bold;
+  transform: scale(0);
+  transition: all 500ms;
+}
+#restaurant_title:hover > i:nth-child(2) {
+  color: #9356dc;
+  transform: scale(0.82);
 }
 
 #menu_choice {
@@ -263,15 +276,25 @@ body {
   margin-top: 5px;
 }
 .card_restaurant__detail__like {
-  padding-top: 20px;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin-top: 20px;
 }
-.card_restaurant__detail i {
-  font-size: 20px;
+.card_restaurant__detail__like i {
+  font-size: 25px;
   color: black;
 }
-.card_restaurant__detail i:hover {
+.card_restaurant__detail__like i:nth-child(2) {
+  position: absolute;
+  left: 0;
   font-weight: bold;
+  transform: scale(0);
+  transition: all 500ms;
+}
+.card_restaurant__detail__like:hover > i:nth-child(2) {
   color: #9356dc;
+  transform: scale(0.84);
 }
 
 .cards_menu {
@@ -309,7 +332,7 @@ body {
   width: 40px;
   right: 10px;
   transition: all 500ms;
-  transition-delay: 50ms;
+  transition-delay: 80ms;
 }
 .cards_menu__price p {
   font-weight: bold;
@@ -318,15 +341,16 @@ body {
 }
 .cards_menu i {
   color: white;
+  font-size: 25px;
 }
 .cards_menu__validation {
   position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 100%;
   right: -60px;
-  justify-content: center;
-  align-items: center;
   background-color: #99e2d0;
   transition: all 500ms;
 }
@@ -339,7 +363,7 @@ body {
 .cards_menu:hover > .cards_menu__price {
   transform: translate(-60px, 0);
 }
-.cards_menu:hover .cards_menu__validation {
+.cards_menu:hover > .cards_menu__validation {
   transform: translate(-60px, 0);
 }
 .cards_menu:hover i {
