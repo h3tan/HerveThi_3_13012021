@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* animation permettant l'apparition progressive d'éléments */
 /* Dimensions par défaut adaptées aux mobiles */
 *,
 *::before,
@@ -151,6 +152,24 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20px;
+  opacity: 0;
+}
+.element_menu:nth-child(1) {
+  animation: appearance 400ms ease-out forwards 400ms;
+}
+.element_menu:nth-child(2) {
+  animation: appearance 400ms ease-out forwards 600ms;
+}
+.element_menu:nth-child(3) {
+  animation: appearance 400ms ease-out forwards 800ms;
+}
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .element_menu h2 {
   width: 100%;

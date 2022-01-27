@@ -25,3 +25,23 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+/* animation permettant l'apparition progressive d'éléments */
+
+@mixin appearance($num_child){
+  $delay: 200ms;
+  @for $i from 1 through ($num_child) {
+      &:nth-child(#{$i}) {
+      $time: $delay;
+      $delay: calc($time + 200ms);
+      animation: appearance 400ms ease-out forwards $delay;
+    }
+  }
+  @keyframes appearance {
+      from {
+          opacity: 0;
+      } to {
+          opacity: 1;
+      }
+  }
+}
