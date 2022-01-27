@@ -35,16 +35,14 @@
       margin-bottom: 0;
     }
   }
-  i {
-    color: white;
-    font-size: 25px;
-  }
   &__validation {
     position: absolute;
     @include center;
     width: 60px;
     height: 100%;
     right: -60px;
+    color: white;
+    font-size: 25px;
     background-color: $color-tertiary;
     transition: all 500ms;
   }
