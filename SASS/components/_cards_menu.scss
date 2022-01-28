@@ -55,7 +55,7 @@
   &:hover > &__price {
     transform: translate(-60px, 0);
   }
-  &:hover >&__validation {
+  &:hover > &__validation {
     transform: translate(-60px, 0);
   }
   &:hover i {

@@ -1,5 +1,4 @@
 #localisation {
-  display: flex;
   @include center;
   background-color: $color-background;
   font-size: 14px;
@@ -10,19 +9,19 @@
 }
 
 #explore {
-  display: flex;
-  flex-direction: column;
+  @include column;
   background-color: $color-background-light;
   padding-top: 40px;
   padding-bottom: 60px;
   text-align: center;
+  z-index: 1;
   h2 {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 50px;
     padding-right: 50px;
   }
-  p {
+  & > p {
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 30px;

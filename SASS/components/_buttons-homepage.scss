@@ -28,6 +28,9 @@
   p {
     font-weight: bold;
   }
+  &:hover {
+    cursor: pointer;
+  }
   &:hover > i {
     color: $color-primary;
   }
