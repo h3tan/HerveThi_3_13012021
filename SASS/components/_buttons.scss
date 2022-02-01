@@ -12,6 +12,12 @@
   }
   &--explore {
     width: 60%;
+    @include tablet-screen {
+      width: 40%;
+    }
+    @include desktop-screen {
+      display: none;
+    }
   }
   &--order {
     width: 40%;

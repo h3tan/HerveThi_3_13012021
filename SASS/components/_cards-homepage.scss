@@ -4,6 +4,12 @@
   margin-top: 20px;
   border-radius: 10px;
   @include border-shadow(gray);
+  @include tablet-screen {
+    width: 45%;
+  }
+  @include desktop-screen {
+    width: 22%;
+  }
   a {
     text-decoration: none;
     color: black;
@@ -37,6 +43,10 @@
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 30px;
+    @include desktop-screen {
+      height: 80px;
+      padding-right: 15px;
+    }
     h4 {
       margin-top: 15px;
       margin-bottom: 0;

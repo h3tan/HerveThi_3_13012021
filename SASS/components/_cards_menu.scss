@@ -6,21 +6,38 @@
   margin-bottom: 20px;
   border-radius: 15px;
   @include border-shadow(gray);
+  @include tablet-screen {
+    width: 30%;
+    height: 150px;
+    flex-direction: column;
+  }
+  @include desktop-screen {
+    width: 100%;
+  }
   &__detail {
     width: 77%;
     margin-left: 10px;
     transition: all 500ms;
+    @include tablet-screen {
+      height: 60%;
+    }
     h3 {
       font-size: 16px;
       margin-top: 10px;
       margin-bottom: 5px;
       @include ellipsis;
+      @include tablet-screen {
+        white-space: normal;
+      }
     }
     p {
       font-size: 14px;
       margin-top: 5px;
       margin-bottom: 10px;
       @include ellipsis;
+      @include tablet-screen {
+        white-space: normal;
+      }
     }
   }
   &__price {
@@ -29,6 +46,9 @@
     right: 10px;
     transition: all 500ms;
     transition-delay: 80ms;
+    @include tablet-screen {
+      bottom: 20px;
+    }
     p {
       font-weight: bold;
       margin-top: 33px;
@@ -51,6 +71,9 @@
   }
   &:hover > &__detail {
     width: 57%;
+    h3, p {
+      @include ellipsis;
+    }
   }
   &:hover > &__price {
     transform: translate(-60px, 0);

@@ -21,49 +21,93 @@
   padding-right: 40px;
   border-radius: 40px 40px 0 0;
   background-color: $color-background-light;
-  i {
-    font-size: 25px;
+  @include tablet-screen {
+    justify-content: center;
   }
-  i:nth-child(2) {
-    position: absolute;
-    right: 40.22px;
-    font-weight: bold;
-    transform: scale(0);
-    transition: all 500ms;
-  }
-  &:hover > i:nth-child(2) {
-    color: $color-primary;
-    transform: scale(0.82);
+  &__like {
+    position: relative;
+    font-size: 30px;
+    @include tablet-screen {
+      left: 30%;
+    }
+    i {
+      font-size: 25px;
+      color: black;
+    }
+    i:nth-child(2) {
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      font-weight: bold;
+      transform: scale(0);
+      transition: all 500ms;
+    }
+    &:hover > i:nth-child(2) {
+      color: $color-primary;
+      transform: scale(0.84);
+    }
   }
 }
 
-.menu_choice {
-  padding-top: 10px;
-  padding-bottom: 30px;
+form {
   background-color: $color-background-light;
+  padding-bottom: 40px;
+}
+
+#menu_choice {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
   & > h2 {
     font-size: 0;
+    width: 100%;
+  }
+  @include tablet-screen {
+    padding: 30px;
+  }
+  @include desktop-screen {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 
 .element_menu {
-  display: flex;
+  position: relative;
+  @include center;
   flex-wrap: wrap;
-  justify-content: center;
   margin-bottom: 20px;
   opacity: 0;
+  @include tablet-screen {
+    justify-content: space-between;
+  }
+  @include desktop-screen {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+  }
   @include appearance($menu-composition);
   h2 {
-    width: 100%;
+    width: 90%;
     margin-top: 0;
-    margin-left: 20px;
+    margin-bottom: 30px;
+    @include tablet-screen {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    @include desktop-screen {
+      margin-left: 0;
+    }
   }
   &__line {
     position: absolute;
-    left: 20px;
-    margin-top: 30px;
     background-color: $color-tertiary;
     width: 40px;
     height: 3px;
+    top: 35px;
+    left: 17px;
+    @include tablet-screen {
+      left: 0;
+    }
   }
 }
