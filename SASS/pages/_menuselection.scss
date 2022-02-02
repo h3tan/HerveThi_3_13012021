@@ -1,51 +1,13 @@
 #restaurant_img {
-  position: relative;
+  position: static;
   height: 300px;
   overflow: hidden;
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-}
-
-#restaurant_title {
-  position: absolute;
-  @include police-logo;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: -60px;
-  padding-left: 20px;
-  padding-right: 40px;
-  border-radius: 40px 40px 0 0;
-  background-color: $color-background-light;
-  @include tablet-screen {
-    justify-content: center;
-  }
-  &__like {
-    position: relative;
-    font-size: 30px;
-    @include tablet-screen {
-      left: 30%;
-    }
-    i {
-      font-size: 25px;
-      color: black;
-    }
-    i:nth-child(2) {
-      position: absolute;
-      left: 0;
-      bottom: 6px;
-      font-weight: bold;
-      transform: scale(0);
-      transition: all 500ms;
-    }
-    &:hover > i:nth-child(2) {
-      color: $color-primary;
-      transform: scale(0.84);
-    }
+    overflow: hidden;
+    z-index: 1;
   }
 }
 
@@ -55,15 +17,15 @@
 }
 
 #menu_choice {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
-  & > h2 {
-    font-size: 0;
-    width: 100%;
-  }
+  border-radius: 40px 40px 0 0;
+  margin-top: -70px;
+  background-color: $color-background-light;
   @include tablet-screen {
     padding: 30px;
+    padding-top: 0;
   }
   @include desktop-screen {
     flex-direction: row;
@@ -72,12 +34,48 @@
   }
 }
 
+#restaurant_title {
+  @include police-logo;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 50px;
+  margin-bottom: 15px;
+  @include tablet-screen {
+    width: 100%;
+    justify-content: center;
+  }
+  &__like {
+    position: relative;
+    font-size: 30px;
+    @include tablet-screen {
+      left: 63px;
+    }
+    i {
+      font-size: 25px;
+      color: black;
+    }
+    i:nth-child(2) {
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      font-weight: bold;
+      transform: scale(0);
+      transition: all 500ms;
+    }
+    &:hover > i:nth-child(2) {
+      color: $color-primary;
+      transform: scale(0.85);
+    }
+  }
+}
+
 .element_menu {
   position: relative;
   @include center;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  background-color: $color-background-light;
   opacity: 0;
   @include tablet-screen {
     justify-content: space-between;
@@ -91,24 +89,20 @@
   h2 {
     width: 90%;
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     @include tablet-screen {
       width: 100%;
-      margin-bottom: 30px;
     }
     @include desktop-screen {
       margin-left: 0;
     }
   }
-  &__line {
-    position: absolute;
-    background-color: $color-tertiary;
-    width: 40px;
+  h2::after {
+    content : "";
+    display: block;
+    width: 60px;
     height: 3px;
-    top: 35px;
-    left: 20px;
-    @include tablet-screen {
-      left: 0;
-    }
+    margin-top: 10px;
+    background-color: $color-tertiary;
   }
 }
