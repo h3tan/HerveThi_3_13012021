@@ -224,7 +224,7 @@ body {
 #restaurant_title__like i:nth-child(2) {
   position: absolute;
   left: 0;
-  bottom: 5px;
+  bottom: 6px;
   font-weight: bold;
   transform: scale(0);
   transition: all 500ms;
@@ -322,7 +322,7 @@ body {
   width: 40px;
   height: 3px;
   top: 35px;
-  left: 17px;
+  left: 20px;
 }
 @media screen and (min-width: 600px) {
   .element_menu__line {
@@ -428,6 +428,7 @@ body {
 }
 
 .card_restaurant {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -476,8 +477,6 @@ body {
   font-weight: bold;
 }
 .card_restaurant__detail {
-  display: flex;
-  justify-content: space-between;
   padding-left: 20px;
   padding-right: 30px;
 }
@@ -496,10 +495,11 @@ body {
   margin-top: 5px;
 }
 .card_restaurant__detail__like {
-  position: relative;
+  position: absolute;
   width: 25px;
   height: 25px;
-  margin-top: 20px;
+  right: 30px;
+  bottom: 30px;
 }
 .card_restaurant__detail__like i {
   font-size: 25px;

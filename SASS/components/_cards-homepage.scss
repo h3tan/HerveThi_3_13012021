@@ -1,4 +1,5 @@
 .card_restaurant {
+  position: relative;
   @include column;
   width: 90%;
   margin-top: 20px;
@@ -39,8 +40,6 @@
     font-weight: bold;
   }
   &__detail {
-    display: flex;
-    justify-content: space-between;
     padding-left: 20px;
     padding-right: 30px;
     @include desktop-screen {
@@ -56,10 +55,11 @@
       margin-top: 5px;
     }
     &__like {
-      position: relative;
+      position: absolute;
       width: 25px;
       height: 25px;
-      margin-top: 20px;
+      right: 30px;
+      bottom: 30px;
       i {
         font-size: 25px;
         color: black;
