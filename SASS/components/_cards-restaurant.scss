@@ -46,13 +46,15 @@
       height: 80px;
       padding-right: 15px;
     }
-    h4 {
+    h3 {
       margin-top: 15px;
       margin-bottom: 0;
       font-size: 18px;
     }
-    p {
+    address {
+      font-style: normal;
       margin-top: 5px;
+      margin-bottom: 10px;
     }
     &__like {
       position: absolute;
@@ -64,6 +66,9 @@
         font-size: 25px;
         color: black;
       }
+      i:nth-child(1) {
+        transition: all 500ms;
+      }
       i:nth-child(2) {
         position: absolute;
         left: 0;
@@ -71,9 +76,12 @@
         transform: scale(0);
         transition: all 500ms;
       }
+      &:hover > i:nth-child(1) {
+        color: $color-primary;
+      }
       &:hover > i:nth-child(2) {
         color: $color-primary;
-        transform: scale(0.84);
+        transform: scale(1);
       }
     }
   }

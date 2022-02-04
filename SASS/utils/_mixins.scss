@@ -17,7 +17,7 @@
 }
 
 @mixin border-shadow($color-shadow) {
-  box-shadow: 1px 1px 12px $color-shadow;
+  box-shadow: 1px 1px 20px $color-shadow;
 }
 
 @mixin ellipsis {
@@ -30,8 +30,8 @@
 
 @mixin appearance($num_child) {
   $delay: 200ms;
-  @for $i from 2 through ($num_child) {
-    &:nth-child(#{$i}) {
+  @for $i from 1 through ($num_child) {
+    &:nth-of-type(#{$i}) {
       $time: $delay;
       $delay: calc($time + 200ms);
       animation: appearance 400ms ease-out forwards $delay;

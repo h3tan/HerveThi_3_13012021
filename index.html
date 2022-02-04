@@ -22,10 +22,27 @@
   </head>
   <body>
     <div class="loading_screen">
-      <div class="loading_screen__points"></div>
-      <div class="loading_screen__points"></div>
-      <div class="loading_screen__points"></div>
-      <div class="loading_screen__points"></div>
+      <div class="loading_screen__text">
+        <span>C</span>
+        <span>h</span>
+        <span>a</span>
+        <span>r</span>
+        <span>g</span>
+        <span>e</span>
+        <span>m</span>
+        <span>e</span>
+        <span>n</span>
+        <span>t</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </div>
+      <div class="loading_screen__spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
     <header>
       <div id="title">
@@ -35,7 +52,7 @@
     <main>
       <div id="localisation">
         <i class="fas fa-map-marker-alt"></i>
-        <h3>Paris, Belleville</h3>
+        <address>Paris, Belleville</address>
       </div>
       <div id="explore">
         <h2>Réservez le menu qui vous convient</h2>
@@ -46,36 +63,34 @@
           </a>
         </div>
       </div>
-      <section id="menu">
+      <form method="post" action="#" class="form_restaurant">
         <h2>Fonctionnement</h2>
-        <form method="post" action="#" class="form_restaurant">
-          <div class="btnfunction">
-            <div class="btnfunction__num">
-              <p>1</p>
-            </div>
-            <i class="fas fa-mobile-alt"></i>
-            <p>Choisissez un restaurant</p>
+        <div class="btnfunction">
+          <div class="btnfunction__num">
+            <p>1</p>
           </div>
-          <div class="btnfunction">
-            <div class="btnfunction__num">
-              <p>2</p>
-            </div>
-            <i class="fas fa-list-ul"></i>
-            <p>Composez votre menu</p>
+          <i class="fas fa-mobile-alt"></i>
+          <p>Choisissez un restaurant</p>
+        </div>
+        <div class="btnfunction">
+          <div class="btnfunction__num">
+            <p>2</p>
           </div>
-          <div class="btnfunction">
-            <div class="btnfunction__num">
-              <p>3</p>
-            </div>
-            <i class="fas fa-store"></i>
-            <p>Dégustez au restaurant</p>
+          <i class="fas fa-list-ul"></i>
+          <p>Composez votre menu</p>
+        </div>
+        <div class="btnfunction">
+          <div class="btnfunction__num">
+            <p>3</p>
           </div>
-        </form>
-      </section>
-      <section id="restaurants">
+          <i class="fas fa-store"></i>
+          <p>Dégustez au restaurant</p>
+        </div>
+      </form>
+      <article id="restaurants">
         <h2>Restaurants</h2>
         <div id="restaurants__container">
-          <article class="card_restaurant">
+          <section class="card_restaurant">
             <a href="menu1.html">
               <div class="card_restaurant__image">
                 <img
@@ -87,16 +102,16 @@
                 </div>
               </div>
               <div class="card_restaurant__detail">
-                <h4>La palette du goût</h4>
-                <p>Ménilmontant</p>
+                <h3>La palette du goût</h3>
+                <address>Ménilmontant</address>
               </div>
             </a>
             <div class="card_restaurant__detail__like">
               <i class="far fa-heart"></i>
               <i class="far fa-heart"></i>
             </div>
-          </article>
-          <article class="card_restaurant">
+          </section>
+          <section class="card_restaurant">
             <a href="menu2.html">
               <div class="card_restaurant__image">
                 <img
@@ -108,16 +123,16 @@
                 </div>
               </div>
               <div class="card_restaurant__detail">
-                <h4>La note enchantée</h4>
-                <p>Charonne</p>
+                <h3>La note enchantée</h3>
+                <address>Charonne</address>
               </div>
             </a>
             <div class="card_restaurant__detail__like">
               <i class="far fa-heart"></i>
               <i class="far fa-heart"></i>
             </div>
-          </article>
-          <article class="card_restaurant">
+          </section>
+          <section class="card_restaurant">
             <a href="menu3.html">
               <div class="card_restaurant__image">
                 <img
@@ -126,16 +141,16 @@
                 />
               </div>
               <div class="card_restaurant__detail">
-                <h4>A la française</h4>
-                <p>Cité Rouge</p>
+                <h3>A la française</h3>
+                <address>Cité Rouge</address>
               </div>
             </a>
             <div class="card_restaurant__detail__like">
               <i class="far fa-heart"></i>
               <i class="far fa-heart"></i>
             </div>
-          </article>
-          <article class="card_restaurant">
+          </section>
+          <section class="card_restaurant">
             <a href="menu4.html">
               <div class="card_restaurant__image">
                 <img
@@ -144,17 +159,17 @@
                 />
               </div>
               <div class="card_restaurant__detail">
-                <h4>Le délice des sens</h4>
-                <p>Folie-Méricourt</p>
+                <h3>Le délice des sens</h3>
+                <address>Folie-Méricourt</address>
               </div>
             </a>
             <div class="card_restaurant__detail__like">
               <i class="far fa-heart"></i>
               <i class="far fa-heart"></i>
             </div>
-          </article>
+          </section>
         </div>
-      </section>
+      </article>
     </main>
     <footer>
       <h2>ohmyfood</h2>

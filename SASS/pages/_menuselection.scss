@@ -64,9 +64,15 @@
       transform: scale(0);
       transition: all 500ms;
     }
+    i:nth-child(1) {
+      transition: all 500ms;
+    }
+    &:hover > i:nth-child(1) {
+      color: $color-primary;
+    }
     &:hover > i:nth-child(2) {
       color: $color-primary;
-      transform: scale(0.85);
+      transform: scale(1);
     }
   }
 }
@@ -86,7 +92,7 @@
     width: 30%;
   }
   @include appearance($menu-composition);
-  h2 {
+  h3 {
     width: 90%;
     margin-top: 0;
     margin-bottom: 20px;
@@ -97,7 +103,7 @@
       margin-left: 0;
     }
   }
-  h2::after {
+  h3::after {
     content : "";
     display: block;
     width: 60px;

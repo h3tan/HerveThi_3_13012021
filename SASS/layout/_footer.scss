@@ -23,6 +23,9 @@ footer {
     a {
       text-decoration: none;
       color: $color-police-standard;
+      &:hover {
+        color: $color-primary;
+      }
     }
   }
 }

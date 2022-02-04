@@ -1,7 +1,7 @@
-@mixin loading($num_points) {
+@mixin loading_spin($num_points) {
   $delay: 0ms;
   @for $i from 1 through ($num_points) {
-    &:nth-child(#{$i}) {
+    &:nth-of-type(#{$i}) {
       $time: $delay;
       $delay: calc($time + 200ms);
       animation: up_and_down 1s linear infinite $delay;
@@ -23,15 +23,38 @@
   }
 }
 
+@mixin loading_text($num_letters) {
+  $delay: 0ms;
+  @for $i from 1 through ($num_letters) {
+    &:nth-of-type(#{$i}) {
+      $time: $delay;
+      $delay: calc($time + 200ms);
+      animation: change_color 1s linear infinite $delay;
+    }
+  }
+  @keyframes change_color {
+    0% {
+      color: $color-primary;
+    }
+    50% {
+      color: $color-secondary;
+    }
+    100% {
+      color: $color-primary;
+    }
+  }
+}
+
 .loading_screen {
   @include center;
+  flex-direction: column;
   position: fixed;
-  z-index: 1;
-  column-gap: 10px;
+  z-index: 3;
+  row-gap: 80px;
   width: 100%;
   height: 100%;
   background-color: white;
-  animation: load 0.5s forwards;
+  animation: load 0s forwards;
   animation-delay: 4s;
   @keyframes load {
     from {
@@ -43,11 +66,25 @@
       opacity: 0;
     }
   }
-  &__points {
+  &__text {
+    display: flex;
+    column-gap: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    color: $color-primary;
+    span {
+      @include loading_text(13);
+    }
+  }
+  &__spinner {
+    display: flex;
+    column-gap: 10px;
+  }
+  &__spinner div {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: $color-primary;
-    @include loading(4);
+    @include loading_spin(5);
   }
 }
