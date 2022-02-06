@@ -45,7 +45,7 @@ main {
   row-gap: 80px;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: #e0dede;
   animation: load 0s forwards;
   animation-delay: 4s;
 }
@@ -159,11 +159,13 @@ main {
 }
 
 .title {
-  position: relative;
   font-family: "Shrikhand", cursive, Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.title--restaurant {
+  position: relative;
   box-shadow: 0 0 5px #646464;
 }
 .title h1 {
@@ -183,7 +185,6 @@ main {
 }
 
 .localisation {
-  position: static;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,11 +200,6 @@ main {
   margin-right: 20px;
 }
 
-.localisation::before {
-  content: "";
-  box-shadow: inset 0 0 10px #323232;
-}
-
 .explore {
   display: flex;
   flex-direction: column;
@@ -211,9 +207,8 @@ main {
   padding-top: 40px;
   padding-bottom: 60px;
   text-align: center;
-  z-index: 1;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .explore {
     padding-top: 20px;
     padding-bottom: 0;
@@ -232,14 +227,12 @@ main {
 }
 
 .form_restaurant {
-  background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   row-gap: 20px;
-  margin-bottom: 50px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 50px;
 }
 @media screen and (min-width: 600px) {
   .form_restaurant {
@@ -256,7 +249,7 @@ main {
 
 #restaurants {
   background-color: #f4f3f3;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -265,14 +258,14 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 600px) {
   #restaurants__container {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   #restaurants__container {
     padding-top: 15px;
   }
@@ -310,7 +303,7 @@ main {
     padding-top: 0;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .menu_choice {
     flex-direction: row;
     flex-wrap: wrap;
@@ -321,48 +314,14 @@ main {
 .restaurant_title {
   font-family: "Shrikhand", cursive, Arial, Helvetica, sans-serif;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding-left: 30px;
-  padding-right: 50px;
-  margin-bottom: 15px;
 }
 @media screen and (min-width: 600px) {
   .restaurant_title {
     width: 100%;
     justify-content: center;
   }
-}
-.restaurant_title__like {
-  position: relative;
-  font-size: 30px;
-}
-@media screen and (min-width: 600px) {
-  .restaurant_title__like {
-    left: 63px;
-  }
-}
-.restaurant_title__like i {
-  font-size: 25px;
-  color: black;
-}
-.restaurant_title__like i:nth-child(2) {
-  position: absolute;
-  left: 0;
-  bottom: 5px;
-  font-weight: bold;
-  transform: scale(0);
-  transition: all 500ms;
-}
-.restaurant_title__like i:nth-child(1) {
-  transition: all 500ms;
-}
-.restaurant_title__like:hover > i:nth-child(1) {
-  color: #9356dc;
-}
-.restaurant_title__like:hover > i:nth-child(2) {
-  color: #9356dc;
-  transform: scale(1);
 }
 
 .element_menu {
@@ -378,7 +337,7 @@ main {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .element_menu {
     flex-direction: column;
     justify-content: flex-start;
@@ -387,14 +346,14 @@ main {
 }
 .element_menu h3 {
   width: 90%;
-  margin-top: 0;
+  margin-top: 15px;
 }
 @media screen and (min-width: 600px) {
   .element_menu h3 {
     width: 100%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .element_menu h3 {
     margin-left: 0;
   }
@@ -416,7 +375,7 @@ main {
   height: 50px;
   margin: auto;
   border-radius: 25px;
-  box-shadow: 8px 8px 10px #646464;
+  box-shadow: 5px 5px 10px #646464;
   transition: filter 500ms ease-in-out, box-shadow 500ms 100ms;
 }
 .btn_standard a {
@@ -427,7 +386,7 @@ main {
   appearance: button;
   width: 220px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .btn_standard--explore {
     display: none;
   }
@@ -441,10 +400,10 @@ main {
 }
 .btn_standard:hover {
   filter: brightness(120%);
-  box-shadow: 8px 8px 10px #323232;
+  box-shadow: 5px 5px 10px #323232;
 }
 
-.btnfunction {
+.btn_function {
   position: relative;
   display: flex;
   align-items: center;
@@ -453,56 +412,102 @@ main {
   padding-right: 5px;
   background-color: #f4f3f3;
   border-radius: 20px;
-  box-shadow: 8px 8px 10px #646464;
+  box-shadow: 5px 5px 10px #646464;
   font-size: 16px;
   transition: box-shadow 500ms;
 }
 @media screen and (min-width: 600px) {
-  .btnfunction {
+  .btn_function {
     overflow: hidden;
   }
 }
-.btnfunction__num {
+.btn_function__num {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  margin-left: -3%;
+  margin-left: -10px;
   background-color: #9356dc;
   font-size: 12px;
   color: white;
 }
 @media screen and (min-width: 600px) {
-  .btnfunction__num {
+  .btn_function__num {
+    width: 40px;
     height: 100%;
     margin-left: 0;
     border-radius: 0;
     font-size: 16px;
   }
 }
-.btnfunction i {
-  margin-left: 30px;
+.btn_function i {
+  margin-left: 15px;
   margin-right: 20px;
   font-size: 20px;
   color: gray;
 }
-.btnfunction p {
+.btn_function p {
   font-weight: bold;
 }
-.btnfunction:hover {
+.btn_function:hover {
   cursor: pointer;
   filter: brightness(103%);
-  box-shadow: 8px 8px 10px #323232;
+  box-shadow: 5px 5px 10px #323232;
 }
-.btnfunction:hover > i {
+.btn_function:hover > i {
   color: #9356dc;
 }
 @media screen and (min-width: 600px) {
-  .btnfunction {
+  .btn_function {
     width: 30%;
+  }
+}
+
+.like {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+.like i {
+  font-size: 25px;
+  color: black;
+}
+.like i:nth-child(2) {
+  position: absolute;
+  font-weight: bold;
+  transform: scale(0);
+  transition: all 500ms;
+}
+.like i:nth-child(1) {
+  transition: all 500ms;
+}
+.like:hover > i:nth-child(1) {
+  color: #9356dc;
+}
+.like:hover > i:nth-child(2) {
+  color: #9356dc;
+  transform: scale(1);
+}
+.like--restaurant {
+  right: 20px;
+  bottom: 30px;
+}
+.like--menu {
+  right: 12%;
+}
+@media screen and (min-width: 600px) {
+  .like--menu {
+    right: 20%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .like--menu {
+    right: 30%;
   }
 }
 
@@ -514,11 +519,11 @@ main {
   margin-top: 20px;
   border-radius: 10px;
   background-color: white;
-  box-shadow: 8px 8px 10px #646464;
+  box-shadow: 5px 5px 10px #646464;
   transition: box-shadow 500ms;
 }
 .card_restaurant:hover {
-  box-shadow: 8px 8px 10px #323232;
+  box-shadow: 5px 5px 10px #323232;
 }
 .card_restaurant:hover .card_restaurant__detail h3 {
   color: #9356dc;
@@ -528,7 +533,7 @@ main {
     width: 48%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .card_restaurant {
     width: 22%;
   }
@@ -538,7 +543,6 @@ main {
   color: black;
 }
 .card_restaurant__image {
-  position: relative;
   height: 170px;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
@@ -565,13 +569,6 @@ main {
 }
 .card_restaurant__detail {
   padding-left: 20px;
-  padding-right: 30px;
-}
-@media screen and (min-width: 992px) {
-  .card_restaurant__detail {
-    height: 80px;
-    padding-right: 15px;
-  }
 }
 .card_restaurant__detail h3 {
   margin-top: 15px;
@@ -580,48 +577,19 @@ main {
 }
 .card_restaurant__detail p {
   margin-top: 5px;
-  margin-bottom: 10px;
-}
-.card_restaurant__detail__like {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: 30px;
-  bottom: 25px;
-}
-.card_restaurant__detail__like i {
-  font-size: 25px;
-  color: black;
-}
-.card_restaurant__detail__like i:nth-child(1) {
-  transition: all 500ms;
-}
-.card_restaurant__detail__like i:nth-child(2) {
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-  transform: scale(0);
-  transition: all 500ms;
-}
-.card_restaurant__detail__like:hover > i:nth-child(1) {
-  color: #9356dc;
-}
-.card_restaurant__detail__like:hover > i:nth-child(2) {
-  color: #9356dc;
-  transform: scale(1);
+  margin-bottom: 15px;
 }
 
 .card_menu {
   position: relative;
   overflow: hidden;
   display: flex;
-  width: 100%;
   margin-bottom: 20px;
   border-radius: 15px;
   background-color: white;
   opacity: 0;
   transition: box-shadow 500ms;
-  box-shadow: 8px 8px 10px gray;
+  box-shadow: 5px 5px 10px gray;
 }
 .card_menu:nth-of-type(1) {
   animation: appearance 400ms ease-out forwards 300ms;
@@ -650,13 +618,13 @@ main {
     flex-direction: column;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .card_menu {
     width: 100%;
   }
 }
 .card_menu__detail {
-  width: 80%;
+  width: 75%;
   margin-left: 10px;
   transition: all 700ms;
 }
@@ -694,9 +662,8 @@ main {
 .card_menu__price {
   position: absolute;
   width: 40px;
-  right: 10px;
+  right: 20px;
   transition: all 500ms;
-  transition-delay: 80ms;
 }
 @media screen and (min-width: 600px) {
   .card_menu__price {
@@ -707,6 +674,7 @@ main {
   font-weight: bold;
   margin-top: 33px;
   margin-bottom: 0;
+  padding-left: 5px;
 }
 .card_menu__validation {
   position: absolute;
@@ -723,10 +691,11 @@ main {
 }
 .card_menu:hover {
   cursor: pointer;
-  box-shadow: 8px 8px 10px #323232;
+  box-shadow: 5px 5px 10px #323232;
 }
 .card_menu:hover > .card_menu__detail {
-  width: 58%;
+  width: 60%;
+  transition: all 500ms;
 }
 .card_menu:hover > .card_menu__detail h4, .card_menu:hover > .card_menu__detail p {
   overflow: hidden;
@@ -734,10 +703,13 @@ main {
   text-overflow: ellipsis;
 }
 .card_menu:hover > .card_menu__price {
-  transform: translate(-60px, 0);
+  transform: translate(-50px, 0);
+  transition: all 500ms;
+  transition-delay: 130ms;
 }
 .card_menu:hover > .card_menu__validation {
   transform: translate(-60px, 0);
+  transition: all 500ms;
 }
 .card_menu:hover i {
   transform: rotate(1turn);

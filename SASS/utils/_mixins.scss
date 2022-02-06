@@ -30,7 +30,7 @@
 /* Mixins pour les couleurs et bordures */
 
 @mixin border-shadow($color-shadow) {
-  box-shadow: 8px 8px 10px $color-shadow;
+  box-shadow: 5px 5px 10px $color-shadow;
 }
 
 /* Animation permettant l'apparition progressive d'éléments */

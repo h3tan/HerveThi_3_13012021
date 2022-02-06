@@ -1,0 +1,39 @@
+.like {
+  position: absolute;
+  @include center;
+  width: 30px;
+  height: 30px;
+  i {
+    font-size: 25px;
+    color: black;
+  }
+  i:nth-child(2) {
+    position: absolute;
+    font-weight: bold;
+    transform: scale(0);
+    transition: all 500ms;
+  }
+  i:nth-child(1) {
+    transition: all 500ms;
+  }
+  &:hover > i:nth-child(1) {
+    color: $color-primary;
+  }
+  &:hover > i:nth-child(2) {
+    color: $color-primary;
+    transform: scale(1);
+  }
+  &--restaurant {
+    right: 20px;
+    bottom: 30px;
+  }
+  &--menu {
+    right: 12%;
+    @include tablet-screen {
+      right: 20%;
+    }
+    @include desktop-screen {
+      right: 30%;
+    }
+  }
+}

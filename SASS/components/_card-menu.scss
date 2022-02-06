@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  width: 100%;
   margin-bottom: 20px;
   border-radius: 15px;
   background-color: $color-background-card;
@@ -19,7 +18,7 @@
     width: 100%;
   }
   &__detail {
-    width: 80%;
+    width: 75%;
     margin-left: 10px;
     transition: all 700ms;
     @include tablet-screen {
@@ -47,9 +46,8 @@
   &__price {
     position: absolute;
     width: 40px;
-    right: 10px;
+    right: 20px;
     transition: all 500ms;
-    transition-delay: 80ms;
     @include tablet-screen {
       bottom: 20px;
     }
@@ -57,6 +55,7 @@
       font-weight: bold;
       margin-top: 33px;
       margin-bottom: 0;
+      padding-left: 5px;
     }
   }
   &__validation {
@@ -75,16 +74,20 @@
     @include border-shadow($color-shadow2);
   }
   &:hover > &__detail {
-    width: 58%;
+    width: 60%;
+    transition: all 500ms;
     h4, p {
       @include ellipsis;
     }
   }
   &:hover > &__price {
-    transform: translate(-60px, 0);
+    transform: translate(-50px, 0);
+    transition: all 500ms;
+    transition-delay: 130ms;
   }
   &:hover > &__validation {
     transform: translate(-60px, 0);
+    transition: all 500ms;
   }
   &:hover i {
     transform: rotate(1turn);
