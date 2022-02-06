@@ -32,9 +32,9 @@ main {
   z-index: 1;
 }
 
-/* Mixin pour l'apparition de l'écran de loading */
-/* Mixin pour l'animation du texte du loading */
+/* Mixin pour la page de loading */
 /* Mixin pour l'animation du spinner du loading */
+/* Mixin pour l'animation du texte du loading */
 .loading_screen {
   display: flex;
   justify-content: center;
