@@ -517,15 +517,12 @@ main {
   flex-direction: column;
   width: 100%;
   margin-top: 20px;
-  border-radius: 10px;
   background-color: white;
-  box-shadow: 5px 5px 10px #646464;
-  transition: box-shadow 500ms;
 }
-.card_restaurant:hover {
+.card_restaurant a:hover {
   box-shadow: 5px 5px 10px #323232;
 }
-.card_restaurant:hover .card_restaurant__detail h3 {
+.card_restaurant a:hover .card_restaurant__detail h3 {
   color: #9356dc;
 }
 @media screen and (min-width: 600px) {
@@ -539,8 +536,11 @@ main {
   }
 }
 .card_restaurant a {
+  border-radius: 10px;
   text-decoration: none;
+  box-shadow: 5px 5px 10px #646464;
   color: black;
+  transition: box-shadow 500ms;
 }
 .card_restaurant__image {
   height: 170px;
@@ -705,7 +705,7 @@ main {
 .card_menu:hover > .card_menu__price {
   transform: translate(-50px, 0);
   transition: all 500ms;
-  transition-delay: 130ms;
+  transition-delay: 110ms;
 }
 .card_menu:hover > .card_menu__validation {
   transform: translate(-60px, 0);

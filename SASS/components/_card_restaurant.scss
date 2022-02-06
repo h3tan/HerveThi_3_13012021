@@ -3,14 +3,11 @@
   @include column;
   width: 100%;
   margin-top: 20px;
-  border-radius: 10px;
   background-color: $color-background-card;
-  @include border-shadow($color-shadow1);
-  transition: box-shadow 500ms;
-  &:hover {
+  & a:hover {
     @include border-shadow($color-shadow2);
   }
-  &:hover &__detail h3 {
+  & a:hover &__detail h3 {
     color: $color-primary;
   }
   @include tablet-screen {
@@ -20,8 +17,11 @@
     width: 22%;
   }
   a {
+    border-radius: 10px;
     text-decoration: none;
+    @include border-shadow($color-shadow1);
     color: $color-police-standard2;
+    transition: box-shadow 500ms;
   }
   &__image {
     height: 170px;
