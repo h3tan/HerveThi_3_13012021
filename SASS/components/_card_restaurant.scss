@@ -4,20 +4,24 @@
   width: 100%;
   margin-top: 20px;
   border-radius: 10px;
+  background-color: $color-background-card;
   @include border-shadow($color-shadow1);
-  transition: all 500ms;
+  transition: box-shadow 500ms;
+  &:hover {
+    @include border-shadow($color-shadow2);
+  }
+  &:hover &__detail h3 {
+    color: $color-primary;
+  }
   @include tablet-screen {
     width: 48%;
   }
   @include desktop-screen {
     width: 22%;
   }
-  &:hover {
-    @include border-shadow($color-shadow2);
-  }
   a {
     text-decoration: none;
-    color: black;
+    color: $color-police-standard2;
   }
   &__image {
     position: relative;

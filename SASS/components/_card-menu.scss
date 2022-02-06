@@ -2,9 +2,10 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  width: 90%;
+  width: 100%;
   margin-bottom: 20px;
   border-radius: 15px;
+  background-color: $color-background-card;
   opacity: 0;
   transition: box-shadow 500ms;
   @include border-shadow(gray);

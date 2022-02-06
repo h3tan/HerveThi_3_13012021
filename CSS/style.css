@@ -1,7 +1,16 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-/* animation permettant l'apparition progressive d'éléments */
+/* Couleurs de l'identité graphique */
+/* Couleurs pour les polices */
+/* Couleurs pour les bordures */
+/* Couleurs pour les fonds */
+/* Variables pour les mixins d'animation */
+/* Mixins pour la police et le formatage de textes */
+/* Mixins pour la disposition des blocs */
+/* Mixins pour les couleurs et bordures */
+/* Animation permettant l'apparition progressive d'éléments */
+/* Mixins pour le responsive */
 /* Dimensions par défaut adaptées aux mobiles */
 *,
 *::before,
@@ -19,13 +28,20 @@ body {
   }
 }
 
+main {
+  z-index: 1;
+}
+
+/* Mixin pour l'apparition de l'écran de loading */
+/* Mixin pour l'animation du texte du loading */
+/* Mixin pour l'animation du spinner du loading */
 .loading_screen {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: fixed;
-  z-index: 3;
+  z-index: 1;
   row-gap: 80px;
   width: 100%;
   height: 100%;
@@ -41,6 +57,7 @@ body {
   to {
     height: 0;
     opacity: 0;
+    z-index: 0;
   }
 }
 .loading_screen__text {
@@ -101,6 +118,7 @@ body {
   }
 }
 .loading_screen__spinner {
+  height: 100px;
   display: flex;
   column-gap: 10px;
 }
@@ -170,7 +188,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: #e7dede;
+  background-color: #e0dede;
 }
 .localisation h3 {
   font-size: 18px;
@@ -189,7 +207,7 @@ body {
 .explore {
   display: flex;
   flex-direction: column;
-  background-color: #f8f6f6;
+  background-color: #f4f3f3;
   padding-top: 40px;
   padding-bottom: 60px;
   text-align: center;
@@ -237,7 +255,7 @@ body {
 }
 
 #restaurants {
-  background-color: #f8f6f6;
+  background-color: #f4f3f3;
   padding-top: 40px;
   padding-left: 30px;
   padding-right: 30px;
@@ -274,7 +292,7 @@ body {
 }
 
 .form_menu {
-  background-color: #f8f6f6;
+  background-color: #f4f3f3;
   padding-bottom: 40px;
 }
 
@@ -284,7 +302,7 @@ body {
   flex-direction: column;
   border-radius: 40px 40px 0 0;
   margin-top: -70px;
-  background-color: #f8f6f6;
+  background-color: #f4f3f3;
 }
 @media screen and (min-width: 600px) {
   .menu_choice {
@@ -305,7 +323,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 24px;
+  padding-left: 30px;
   padding-right: 50px;
   margin-bottom: 15px;
 }
@@ -348,14 +366,15 @@ body {
 }
 
 .element_menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 @media screen and (min-width: 600px) {
   .element_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -369,7 +388,6 @@ body {
 .element_menu h3 {
   width: 90%;
   margin-top: 0;
-  margin-bottom: 20px;
 }
 @media screen and (min-width: 600px) {
   .element_menu h3 {
@@ -384,7 +402,7 @@ body {
 .element_menu h3::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 46px;
   height: 3px;
   margin-top: 10px;
   background-color: #99e2d0;
@@ -422,7 +440,7 @@ body {
   cursor: pointer;
 }
 .btn_standard:hover {
-  filter: brightness(110%);
+  filter: brightness(120%);
   box-shadow: 8px 8px 10px #323232;
 }
 
@@ -433,11 +451,11 @@ body {
   width: 100%;
   height: 60px;
   padding-right: 5px;
-  background-color: #f8f6f6;
+  background-color: #f4f3f3;
   border-radius: 20px;
   box-shadow: 8px 8px 10px #646464;
   font-size: 16px;
-  transition: all 500ms;
+  transition: box-shadow 500ms;
 }
 @media screen and (min-width: 600px) {
   .btnfunction {
@@ -476,6 +494,7 @@ body {
 }
 .btnfunction:hover {
   cursor: pointer;
+  filter: brightness(103%);
   box-shadow: 8px 8px 10px #323232;
 }
 .btnfunction:hover > i {
@@ -494,8 +513,15 @@ body {
   width: 100%;
   margin-top: 20px;
   border-radius: 10px;
+  background-color: white;
   box-shadow: 8px 8px 10px #646464;
-  transition: all 500ms;
+  transition: box-shadow 500ms;
+}
+.card_restaurant:hover {
+  box-shadow: 8px 8px 10px #323232;
+}
+.card_restaurant:hover .card_restaurant__detail h3 {
+  color: #9356dc;
 }
 @media screen and (min-width: 600px) {
   .card_restaurant {
@@ -506,9 +532,6 @@ body {
   .card_restaurant {
     width: 22%;
   }
-}
-.card_restaurant:hover {
-  box-shadow: 8px 8px 10px #323232;
 }
 .card_restaurant a {
   text-decoration: none;
@@ -592,9 +615,10 @@ body {
   position: relative;
   overflow: hidden;
   display: flex;
-  width: 90%;
+  width: 100%;
   margin-bottom: 20px;
   border-radius: 15px;
+  background-color: white;
   opacity: 0;
   transition: box-shadow 500ms;
   box-shadow: 8px 8px 10px gray;

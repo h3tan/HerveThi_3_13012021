@@ -25,7 +25,7 @@
     cursor: pointer;
   }
   &:hover {
-    filter: brightness(110%);
+    filter: brightness(120%);
     @include border-shadow($color-shadow2);
   }
 }
