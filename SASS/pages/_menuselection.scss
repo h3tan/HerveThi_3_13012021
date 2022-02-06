@@ -1,4 +1,4 @@
-#restaurant_img {
+.restaurant_img {
   position: static;
   height: 300px;
   overflow: hidden;
@@ -16,7 +16,7 @@
   padding-bottom: 40px;
 }
 
-#menu_choice {
+.menu_choice {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
   }
 }
 
-#restaurant_title {
+.restaurant_title {
   @include police-logo;
   display: flex;
   justify-content: space-between;
@@ -81,8 +81,6 @@
   position: relative;
   @include center;
   flex-wrap: wrap;
-  margin-bottom: 20px;
-  opacity: 0;
   @include tablet-screen {
     justify-content: space-between;
   }
@@ -91,7 +89,6 @@
     justify-content: flex-start;
     width: 30%;
   }
-  @include appearance($menu-composition);
   h3 {
     width: 90%;
     margin-top: 0;

@@ -4,13 +4,21 @@ footer {
   background-color: #3d3d3d;
   color: $color-police-standard;
   padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
   h2 {
     @include police-logo;
-    margin-left: 25px;
     margin-bottom: 10px;
   }
   ul {
-    padding-left: 25px;
+    padding-left: 0;
+    @include tablet-screen {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: space-around;
+      height: 70px;
+    }
   }
   li {
     display: flex;
@@ -26,6 +34,9 @@ footer {
       &:hover {
         color: $color-primary;
       }
+    }
+    address {
+      font-style: normal;
     }
   }
 }

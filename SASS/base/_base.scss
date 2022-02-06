@@ -9,4 +9,9 @@
 body {
   @include police-texte;
   max-width: 1920px;
+  h2 {
+    @include tablet-screen {
+      text-align: center;
+    }
+  }
 }

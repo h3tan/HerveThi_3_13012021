@@ -7,8 +7,9 @@
   padding-right: 5px;
   background-color: $color-background-light;
   border-radius: 20px;
-  @include border-shadow(gray);
+  @include border-shadow($color-shadow1);
   font-size: 16px;
+  transition: all 500ms;
   @include tablet-screen {
     overflow: hidden;
   }
@@ -40,6 +41,7 @@
   }
   &:hover {
     cursor: pointer;
+    @include border-shadow($color-shadow2);
   }
   &:hover > i {
     color: $color-primary;

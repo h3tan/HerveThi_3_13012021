@@ -5,23 +5,21 @@
   margin: auto;
   border-radius: 25px;
   @include border-shadow($color-shadow1);
-  transition: filter 300ms ease-in-out, box-shadow 200ms 100ms;
+  transition: filter 500ms ease-in-out, box-shadow 500ms 100ms;
   a {
     text-decoration: none;
     color: $color-police-standard;
   }
   &--explore {
-    width: 60%;
-    @include tablet-screen {
-      width: 40%;
-    }
+    appearance: button;
+    width: 220px;
     @include desktop-screen {
       display: none;
     }
   }
   &--order {
     width: 40%;
-    margin-top: 15px;
+    margin-top: 20px;
     border: transparent;
     color: $color-police-standard;
     cursor: pointer;
