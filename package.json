@@ -4,7 +4,8 @@
   "description": "Projet 3 OpenClassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch SASS/style.scss:CSS/style.css"
+    "sass": "sass --watch SASS/style.scss:CSS/style.css",
+    "prefix": "postcss CSS/style.css --use autoprefixer -d. CSS/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/h3tan/HerveThi_3_13012021/issues"
   },
-  "homepage": "https://github.com/h3tan/HerveThi_3_13012021#readme"
+  "homepage": "https://github.com/h3tan/HerveThi_3_13012021#readme",
+  "browserslist": "last 4 versions"
 }

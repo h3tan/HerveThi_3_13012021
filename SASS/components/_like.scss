@@ -7,24 +7,30 @@
     font-size: 25px;
     color: black;
   }
-  i:nth-child(2) {
-    position: absolute;
-    font-weight: bold;
-    transform: scale(0);
-    transition: all 500ms;
-  }
   i:nth-child(1) {
     transition: all 500ms;
   }
+  i:nth-child(2) {
+    position: absolute;
+    transform: scale(0);
+    background:linear-gradient(to top left, $color-primary, $color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 500ms;
+  }
   &:hover > i:nth-child(1) {
-    color: $color-primary;
+    background:linear-gradient(to top left, $color-primary, $color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 500ms;
   }
   &:hover > i:nth-child(2) {
-    color: $color-primary;
     transform: scale(1);
   }
   &--restaurant {
-    right: 20px;
+    right: 25px;
     bottom: 30px;
   }
   &--menu {
