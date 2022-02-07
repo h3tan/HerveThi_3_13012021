@@ -11,15 +11,15 @@
     color: $color-police-standard;
   }
   &--explore {
-    appearance: button;
     width: 220px;
     @include desktop-screen {
       display: none;
     }
   }
   &--order {
-    width: 40%;
-    margin-top: 20px;
+    width: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border: transparent;
     color: $color-police-standard;
     cursor: pointer;
