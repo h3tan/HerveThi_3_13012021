@@ -34,9 +34,9 @@
 }
 
 @mixin fill-fontawesome ($background) {
-  -webkit-background-clip: text;
-  background-clip: text;
   background: $background;
+  background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 
