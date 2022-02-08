@@ -1,52 +1,57 @@
 .btn_function {
-  position: relative;
-  display: flex;
   align-items: center;
-  width: 100%;
-  height: 60px;
-  padding-right: 5px;
   background-color: $color-background-light;
   border-radius: 20px;
+  display: flex;
+  height: 60px;
+  padding-right: 5px;
+  position: relative;
+  width: 100%;
   @include border-shadow($color-shadow1);
   font-size: 16px;
   transition: box-shadow 500ms;
+
   @include tablet-screen {
     overflow: hidden;
   }
+
   &__num {
     @include center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-left: -10px;
     background-color: $color-primary;
-    font-size: 12px;
+    border-radius: 50%;
     color: $color-police-standard;
+    font-size: 12px;
+    height: 20px;
+    margin-left: -10px;
+    width: 20px;
     @include tablet-screen {
-      width: 40px;
-      height: 100%;
-      margin-left: 0;
       border-radius: 0;
       font-size: 16px;
+      height: 100%;
+      margin-left: 0;
+      width: 40px;
     }
   }
+
   i {
+    color: gray;
+    font-size: 20px;
     margin-left: 15px;
     margin-right: 20px;
-    font-size: 20px;
-    color: gray;
   }
+
   p {
     font-weight: bold;
   }
+
   &:hover {
-    cursor: pointer;
-    filter: brightness(103%);
-    @include border-shadow($color-shadow2);
+    @include hover-buttons;
   }
+
   &:hover > i {
     color: $color-primary;
   }
+
   @include tablet-screen {
     width: 30%;
   }

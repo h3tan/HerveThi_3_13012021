@@ -1,25 +1,28 @@
 .title {
   @include police-logo;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   &--restaurant {
-    position: relative;
     box-shadow: 0 0 5px $color-shadow1;
+    position: relative;
   }
+
   h1 {
-    margin-top: 15px;
-    margin-bottom: 10px;
     font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 15px;
   }
+
   h3 {
     font-size: 16px;
   }
+
   a {
-    position: absolute;
-    left: 20px;
-    text-decoration: none;
     color: $color-police-standard2;
     font-size: 20px;
+    left: 20px;
+    position: absolute;
+    text-decoration: none;
   }
 }

@@ -1,94 +1,109 @@
 .card_menu {
-  position: relative;
-  overflow: hidden;
+  @include appearance($menu-composition);
+  @include border-shadow(gray);
+  background-color: $color-background-card;
+  border-radius: 15px;
   display: flex;
   margin-bottom: 20px;
-  border-radius: 15px;
-  background-color: $color-background-card;
   opacity: 0;
+  overflow: hidden;
+  position: relative;
   transition: box-shadow 500ms;
-  @include border-shadow(gray);
-  @include appearance($menu-composition);
+
   @include tablet-screen {
-    width: 30%;
-    height: 150px;
     flex-direction: column;
+    height: 120px;
+    width: 30%;
   }
+
   @include desktop-screen {
+    height: 60px;
     width: 100%;
   }
+
   &__detail {
-    width: 75%;
     margin-left: 10px;
     transition: all 700ms;
+    width: 75%;
+
     @include tablet-screen {
       height: 60%;
     }
+
     h4 {
+      @include ellipsis;
       font-size: 16px;
-      margin-top: 10px;
       margin-bottom: 5px;
-      @include ellipsis;
-      @include tablet-screen {
-        white-space: normal;
-      }
+      margin-top: 10px;
     }
+
     p {
-      font-size: 13px;
-      margin-top: 5px;
-      margin-bottom: 10px;
       @include ellipsis;
+      font-size: 13px;
+      margin-bottom: 10px;
+      margin-top: 5px;
+
       @include tablet-screen {
         white-space: normal;
       }
     }
   }
+
   &__price {
     position: absolute;
-    width: 40px;
     right: 20px;
     transition: all 500ms;
+    width: 40px;
+
     @include tablet-screen {
       bottom: 20px;
     }
+
     p {
       font-weight: bold;
-      margin-top: 33px;
       margin-bottom: 0;
+      margin-top: 33px;
       padding-left: 5px;
     }
   }
+
   &__validation {
-    position: absolute;
     @include center;
-    width: 60px;
-    height: 100%;
-    right: -60px;
+    background-color: $color-tertiary;
     color: white;
     font-size: 25px;
-    background-color: $color-tertiary;
+    height: 100%;
+    position: absolute;
+    right: -60px;
     transition: all 500ms;
+    width: 60px;
   }
+
   &:hover {
     cursor: pointer;
     @include border-shadow($color-shadow2);
   }
+
   &:hover > &__detail {
-    width: 60%;
     transition: all 500ms;
+    width: 60%;
+
     h4, p {
       @include ellipsis;
     }
   }
+
   &:hover > &__price {
     transform: translate(-50px, 0);
-    transition: all 500ms;
     transition-delay: 110ms;
+    transition: all 500ms;
   }
+
   &:hover > &__validation {
     transform: translate(-60px, 0);
     transition: all 500ms;
   }
+
   &:hover i {
     transform: rotate(1turn);
     transition: all 700ms;

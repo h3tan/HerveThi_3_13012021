@@ -1,62 +1,70 @@
 .card_restaurant {
-  position: relative;
   @include column;
-  width: 100%;
-  margin-top: 20px;
   background-color: $color-background-card;
   border-radius: 10px 10px 0 0;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+
   @include tablet-screen {
     width: 48%;
   }
   @include desktop-screen {
     width: 22%;
   }
+
   a {
-    border-radius: 10px;
-    text-decoration: none;
     @include border-shadow($color-shadow1);
+    border-radius: 10px;
     color: $color-police-standard2;
+    text-decoration: none;
     transition: box-shadow 500ms;
   }
+
   a:hover {
-    @include border-shadow($color-shadow2);
+    @include hover-buttons;
   }
+
   a:hover &__detail h3 {
     color: $color-primary;
   }
+
   &__image {
+    border-radius: 10px 10px 0 0;
     height: 170px;
     overflow: hidden;
-    border-radius: 10px 10px 0 0;
+
     img {
-      width: 100%;
       height: 100%;
       object-fit: cover;
+      width: 100%;
     }
   }
+
   &__new {
-    position: absolute;
     @include center;
     background-color: $color-new-background;
-    color: $color-new;
-    width: 90px;
-    height: 30px;
-    top: 15px;
-    right: 10px;
     border-radius: 3px;
+    color: $color-new;
     font-size: 14px;
     font-weight: bold;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 90px;
   }
   &__detail {
     padding-left: 20px;
+
     h3 {
-      margin-top: 15px;
-      margin-bottom: 0;
       font-size: 18px;
+      margin-bottom: 0;
+      margin-top: 15px;
     }
     p {
-      margin-top: 5px;
       margin-bottom: 15px;
+      margin-top: 5px;
     }
   }
 }

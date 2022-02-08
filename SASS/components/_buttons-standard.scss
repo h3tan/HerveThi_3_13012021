@@ -1,14 +1,14 @@
 .btn_standard {
   @include center;
-  background: linear-gradient(to top left, $color-primary, $color-secondary);
+  @include border-shadow($color-shadow1);
+  background: $gradient-primary;
+  border-radius: 25px;
   height: 50px;
   margin: auto;
-  border-radius: 25px;
-  @include border-shadow($color-shadow1);
   transition: filter 500ms ease-in-out, box-shadow 500ms 100ms;
   a {
-    text-decoration: none;
     color: $color-police-standard;
+    text-decoration: none;
   }
   &--explore {
     width: 220px;
@@ -17,15 +17,14 @@
     }
   }
   &--order {
-    width: 150px;
-    margin-top: 30px;
-    margin-bottom: 30px;
     border: transparent;
     color: $color-police-standard;
     cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 150px;
   }
   &:hover {
-    filter: brightness(120%);
-    @include border-shadow($color-shadow2);
+    @include hover-buttons;
   }
 }

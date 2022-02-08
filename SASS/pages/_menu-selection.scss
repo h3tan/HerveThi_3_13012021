@@ -1,30 +1,30 @@
 .restaurant_img {
-  position: static;
   height: 300px;
   overflow: hidden;
+  position: static;
   img {
-    width: 100%;
     object-fit: cover;
-    overflow: hidden;
-    z-index: 1;
+    width: 100%;
   }
 }
 
 .form_menu {
   background-color: $color-background-light;
-  padding-bottom: 30px;
   margin-top: -100px;
+  padding-bottom: 30px;
 }
 
 .menu_choice {
-  position: relative;
+  background-color: $color-background-light;
+  border-radius: 40px 40px 0 0;
   display: flex;
   flex-direction: column;
-  border-radius: 40px 40px 0 0;
-  background-color: $color-background-light;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
   @include tablet-screen {
-    padding: 30px;
     padding-top: 0;
+    padding: 30px;
   }
   @include desktop-screen {
     flex-direction: row;
@@ -35,18 +35,16 @@
 
 .restaurant_title {
   @include police-logo;
-  display: flex;
   align-items: center;
-  padding-left: 30px;
+  display: flex;
+
   @include tablet-screen {
-    width: 100%;
     justify-content: center;
+    width: 100%;
   }
 }
 
 .element_menu {
-  padding-left: 30px;
-  padding-right: 30px;
   @include tablet-screen {
     @include center;
     flex-wrap: wrap;
@@ -58,8 +56,8 @@
     width: 30%;
   }
   h3 {
-    width: 90%;
     margin-top: 15px;
+    width: 90%;
     @include tablet-screen {
       width: 100%;
     }
@@ -68,11 +66,11 @@
     }
   }
   h3::after {
+    background-color: $color-tertiary;
     content : "";
     display: block;
-    width: 46px;
     height: 3px;
     margin-top: 10px;
-    background-color: $color-tertiary;
+    width: 46px;
   }
 }

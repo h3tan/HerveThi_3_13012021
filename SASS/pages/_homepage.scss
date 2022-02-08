@@ -1,11 +1,13 @@
 .localisation {
   @include center;
-  height: 50px;
   background-color: $color-background;
+  height: 50px;
+
   h3 {
     font-size: 18px;
     font-weight: bold;
   }
+
   i {
     font-size: 20px;
     margin-right: 20px;
@@ -15,57 +17,65 @@
 .explore {
   @include column;
   background-color: $color-background-light;
-  padding-top: 40px;
   padding-bottom: 60px;
+  padding-top: 40px;
   text-align: center;
+
   @include desktop-screen {
-    padding-top: 20px;
     padding-bottom: 0;
+    padding-top: 20px;
   }
+
   h2 {
-    margin-top: 0;
     margin-bottom: 0;
+    margin-top: 0;
     padding-left: 50px;
     padding-right: 50px;
   }
+
   & > p {
+    margin-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-bottom: 30px;
   }
 }
 
 .form_restaurant {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  padding-bottom: 50px;
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 50px;
+  row-gap: 20px;
+
   @include tablet-screen {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   h2 {
-    width: 100%;
-    margin-top: 40px;
     margin-bottom: 10px;
+    margin-top: 40px;
+    width: 100%;
   }
 }
 
 #restaurants {
   background-color: $color-background-light;
-  padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 30px;
+
   &__container {
     @include center;
     flex-wrap: wrap;
     padding-bottom: 60px;
+
     @include tablet-screen {
       justify-content: space-between;
     }
+
     @include desktop-screen {
       padding-top: 15px;
     }

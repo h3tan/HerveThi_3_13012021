@@ -1,32 +1,39 @@
 .like {
-  position: absolute;
   @include center;
-  width: 30px;
   height: 30px;
+  position: absolute;
+  width: 30px;
+
   i {
-    font-size: 25px;
     color: black;
+    font-size: 25px;
   }
+
   i:nth-child(1) {
     @include like-transition($like-duration);
   }
+
   i:nth-child(2) {
-    position: absolute;
-    transform: scale(0);
     @include fill-fontawesome($gradient-primary);
     @include like-transition($like-duration);
+    position: absolute;
+    transform: scale(0);
   }
+
   &:hover > i:nth-child(1) {
     @include fill-fontawesome($gradient-primary);
     transform: scale(0);
   }
+
   &:hover > i:nth-child(2) {
     transform: scale(1);
   }
+
   &--restaurant {
-    right: 25px;
     bottom: 30px;
+    right: 25px;
   }
+
   &--menu {
     right: 12%;
     @include tablet-screen {

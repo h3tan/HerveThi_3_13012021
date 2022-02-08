@@ -10,8 +10,8 @@
 
 @mixin ellipsis {
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Mixins pour la disposition des blocs */
@@ -22,9 +22,9 @@
 }
 
 @mixin center {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 /* Mixins pour les couleurs, le fond et bordures */
@@ -34,9 +34,9 @@
 }
 
 @mixin fill-fontawesome ($background) {
-  background: $background;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
+  background: $background;
   color: transparent;
 }
 
