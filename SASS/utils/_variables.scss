@@ -4,6 +4,8 @@ $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 
+$gradient-primary: linear-gradient(to top left, $color-primary, $color-secondary);
+
 /* Couleurs pour les polices */
 
 $color-police-standard: white;
@@ -26,4 +28,5 @@ $color-background-card: white;
 
 /* Variables pour les mixins d'animation */
 
+$like-duration: 500ms;
 $menu-composition: 4;

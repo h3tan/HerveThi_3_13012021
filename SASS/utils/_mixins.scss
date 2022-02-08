@@ -27,13 +27,32 @@
   align-items: center;
 }
 
-/* Mixins pour les couleurs et bordures */
+/* Mixins pour les couleurs, le fond et bordures */
 
 @mixin border-shadow($color-shadow) {
   box-shadow: 5px 5px 10px $color-shadow;
 }
 
-/* Animation permettant l'apparition progressive d'éléments */
+@mixin fill-fontawesome ($background) {
+  background: $background;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/*Mixins pour les comportements lors d'un hover */
+
+@mixin hover-buttons {
+  cursor: pointer;
+  filter: brightness(120%);
+  @include border-shadow($color-shadow2);
+}
+
+/* Mixins pour les animations */
+
+@mixin like-transition($duration) {
+  transition: all $like-duration;
+}
 
 @mixin appearance($num_child) {
   $delay: 100ms;
