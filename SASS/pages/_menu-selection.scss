@@ -2,8 +2,10 @@
   height: 300px;
   overflow: hidden;
   position: static;
+
   img {
     object-fit: cover;
+    height: 100%;
     width: 100%;
   }
 }
