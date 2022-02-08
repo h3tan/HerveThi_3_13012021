@@ -8,23 +8,17 @@
     color: black;
   }
   i:nth-child(1) {
-    transition: all 500ms;
+    @include like-transition($like-duration);
   }
   i:nth-child(2) {
     position: absolute;
     transform: scale(0);
-    background:linear-gradient(to top left, $color-primary, $color-secondary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: all 500ms;
+    @include fill-fontawesome($gradient-primary);
+    @include like-transition($like-duration);
   }
   &:hover > i:nth-child(1) {
-    background:linear-gradient(to top left, $color-primary, $color-secondary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: all 500ms;
+    @include fill-fontawesome($gradient-primary);
+    transform: scale(0);
   }
   &:hover > i:nth-child(2) {
     transform: scale(1);
