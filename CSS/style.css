@@ -462,7 +462,7 @@ main {
 }
 .btn_function:hover {
   cursor: pointer;
-  background-color: #9356dc40;
+  background-color: #e9ddf8;
   box-shadow: 5px 5px 10px #323232;
 }
 .btn_function:hover > i {

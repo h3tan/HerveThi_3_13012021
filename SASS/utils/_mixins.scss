@@ -50,7 +50,7 @@
 
 @mixin hover-btn-function {
   cursor: pointer;
-  background-color: $color-primary-opacity;
+  background-color: lighten($color-primary, 32);
   @include border-shadow($color-shadow2);
 }
 
