@@ -314,7 +314,6 @@ main {
 @media screen and (min-width: 800px) {
   .menu_choice {
     padding-top: 0;
-    padding: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -354,7 +353,7 @@ main {
   }
 }
 .element_menu h3 {
-  margin-top: 15px;
+  margin-top: 20px;
   width: 90%;
 }
 @media screen and (min-width: 800px) {
