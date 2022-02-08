@@ -9,4 +9,4 @@ Projet 3 OpenClassrooms
 
 2. A propos du code:
 
-- @import ne sera bientôt plus supporté dans un avenir proche, toutes ses occurrences dans les fichiers SASS devront être remplacés par @use par exemple
+- @import ne sera bientôt plus supporté dans un avenir proche, toutes ses occurrences dans les fichiers SASS devront être remplacées par @use par exemple
