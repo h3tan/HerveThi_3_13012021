@@ -6,16 +6,19 @@
   height: 50px;
   margin: auto;
   transition: filter 500ms ease-in-out, box-shadow 500ms 100ms;
+
   a {
     color: $color-police-standard;
     text-decoration: none;
   }
+
   &--explore {
     width: 220px;
     @include desktop-screen {
       display: none;
     }
   }
+
   &--order {
     border: transparent;
     color: $color-police-standard;
@@ -24,7 +27,8 @@
     margin-top: 30px;
     width: 150px;
   }
+
   &:hover {
-    @include hover-buttons;
+    @include hover-elements;
   }
 }

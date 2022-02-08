@@ -58,6 +58,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   @include desktop-screen {
     flex-direction: column;
     justify-content: flex-start;

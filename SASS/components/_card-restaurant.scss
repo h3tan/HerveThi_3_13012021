@@ -22,7 +22,7 @@
   }
 
   a:hover {
-    @include hover-buttons;
+    @include hover-elements;
   }
 
   a:hover &__detail h3 {

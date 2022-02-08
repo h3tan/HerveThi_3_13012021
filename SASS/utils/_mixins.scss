@@ -42,9 +42,15 @@
 
 /*Mixins pour les comportements lors d'un hover */
 
-@mixin hover-buttons {
+@mixin hover-elements {
   cursor: pointer;
   filter: brightness(120%);
+  @include border-shadow($color-shadow2);
+}
+
+@mixin hover-btn-function {
+  cursor: pointer;
+  background-color: $color-primary-opacity;
   @include border-shadow($color-shadow2);
 }
 

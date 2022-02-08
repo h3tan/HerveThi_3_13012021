@@ -24,6 +24,7 @@
     height: 20px;
     margin-left: -10px;
     width: 20px;
+
     @include tablet-screen {
       border-radius: 0;
       font-size: 16px;
@@ -45,7 +46,7 @@
   }
 
   &:hover {
-    @include hover-buttons;
+    @include hover-btn-function;
   }
 
   &:hover > i {
