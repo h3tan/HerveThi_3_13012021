@@ -6,6 +6,10 @@ $color-tertiary: #99e2d0;
 
 $gradient-primary: linear-gradient(to top left, $color-primary, $color-secondary);
 
+/* Variables pour les tailles */
+
+$width-max: 1920px;
+
 /* Couleurs pour les polices */
 
 $color-police-standard: white;
@@ -13,7 +17,7 @@ $color-police-standard2: black;
 
 /* Couleurs pour les bordures */
 
-$color-shadow1: rgb(100, 100, 100);
+$color-shadow1: rgb(150, 150, 150);
 $color-shadow2: rgb(50, 50, 50);
 
 /* Couleurs pour les fonds */
