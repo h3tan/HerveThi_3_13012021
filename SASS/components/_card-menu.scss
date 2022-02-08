@@ -80,7 +80,8 @@
   }
 
   &:hover {
-    @include hover-elements;
+    cursor: pointer;
+    @include border-shadow($color-shadow2);
   }
 
   &:hover > &__detail {
