@@ -664,8 +664,8 @@ a:hover .card_restaurant__detail h3 {
 .card_menu__price {
   position: absolute;
   right: 20px;
-  transition: all 500ms;
   width: 40px;
+  transition: all 500ms;
 }
 @media screen and (min-width: 800px) {
   .card_menu__price {
@@ -688,16 +688,16 @@ a:hover .card_restaurant__detail h3 {
   height: 100%;
   position: absolute;
   right: -60px;
-  transition: all 500ms;
   width: 60px;
+  transition: all 500ms;
 }
 .card_menu:hover {
   cursor: pointer;
   box-shadow: 5px 5px 10px #323232;
 }
 .card_menu:hover > .card_menu__detail {
-  transition: all 500ms;
   width: 60%;
+  transition: all 500ms;
 }
 .card_menu:hover > .card_menu__detail h4, .card_menu:hover > .card_menu__detail p {
   overflow: hidden;
@@ -706,8 +706,8 @@ a:hover .card_restaurant__detail h3 {
 }
 .card_menu:hover > .card_menu__price {
   transform: translate(-50px, 0);
-  transition-delay: 110ms;
   transition: all 500ms;
+  transition-delay: 110ms;
 }
 .card_menu:hover > .card_menu__validation {
   transform: translate(-60px, 0);
