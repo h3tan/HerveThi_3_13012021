@@ -8,7 +8,6 @@
 
 body {
   @include police-texte;
-  max-width: $width-max;
   h2 {
     @include tablet-screen {
       text-align: center;

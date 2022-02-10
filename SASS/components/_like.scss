@@ -32,6 +32,9 @@
   &--restaurant {
     bottom: 30px;
     right: 25px;
+    @include tablet-screen {
+      right: 15px;
+    }
   }
 
   &--menu {

@@ -1,7 +1,10 @@
 .localisation {
+  @include width-max-page;
   @include center;
   background-color: $color-background;
   height: 50px;
+  position: relative;
+  box-shadow: inset 0px 7px 5px -8px;
 
   h3 {
     font-size: 18px;
@@ -15,6 +18,7 @@
 }
 
 .explore {
+  @include width-max-page;
   @include column;
   background-color: $color-background-light;
   padding-bottom: 60px;
@@ -41,6 +45,7 @@
 }
 
 .form_restaurant {
+  @include width-max-page;
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
@@ -62,10 +67,15 @@
 }
 
 #restaurants {
+  @include width-max-page;
   background-color: $color-background-light;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 30px;
+  @include tablet-screen {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   &__container {
     @include center;
@@ -73,7 +83,7 @@
     padding-bottom: 60px;
 
     @include tablet-screen {
-      justify-content: space-between;
+      justify-content: space-around;
     }
 
     @include desktop-screen {

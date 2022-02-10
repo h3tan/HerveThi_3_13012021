@@ -12,12 +12,6 @@
 
   @include tablet-screen {
     flex-direction: column;
-    height: 120px;
-    width: 30%;
-  }
-
-  @include desktop-screen {
-    height: 60px;
     width: 100%;
   }
 
@@ -27,7 +21,11 @@
     width: 75%;
 
     @include tablet-screen {
-      height: 60%;
+      width: 65%;
+    }
+
+    @include desktop-screen {
+      width: 75%;
     }
 
     h4 {
@@ -42,10 +40,6 @@
       font-size: 13px;
       margin-bottom: 10px;
       margin-top: 5px;
-
-      @include tablet-screen {
-        white-space: normal;
-      }
     }
   }
 
@@ -54,10 +48,6 @@
     right: 20px;
     width: 40px;
     transition: all 500ms;
-
-    @include tablet-screen {
-      bottom: 20px;
-    }
 
     p {
       font-weight: bold;

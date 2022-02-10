@@ -8,16 +8,13 @@
     height: 100%;
     width: 100%;
     @include tablet-screen {
-      max-width: map-get($breakpoints, desktop);
       object-position: 0 65%;
-    }
-    @include desktop-screen {
-      max-width: $width-max;
     }
   }
 }
 
 .form_menu {
+  @include width-max-page;
   background-color: $color-background-light;
   margin-top: -70px;
   padding-bottom: 30px;
@@ -31,10 +28,9 @@
   padding-left: 30px;
   padding-right: 30px;
   position: relative;
+
   @include tablet-screen {
-    padding-top: 0;
-  }
-  @include desktop-screen {
+    padding: 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -56,10 +52,6 @@
   @include tablet-screen {
     @include center;
     flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  @include desktop-screen {
     flex-direction: column;
     justify-content: flex-start;
     width: 30%;

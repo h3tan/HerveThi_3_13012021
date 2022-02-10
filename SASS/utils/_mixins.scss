@@ -14,7 +14,12 @@
   white-space: nowrap;
 }
 
-/* Mixins pour la disposition des blocs */
+/* Mixins pour la taille et la disposition des blocs */
+
+@mixin width-max-page {
+  max-width: $width-max;
+  margin: auto;
+}
 
 @mixin column {
   display: flex;
