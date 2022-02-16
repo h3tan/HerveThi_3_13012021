@@ -248,11 +248,6 @@ header {
   position: absolute;
   text-decoration: none;
 }
-@media screen and (min-width: 1024px) {
-  .title a {
-    left: none;
-  }
-}
 
 .localisation {
   max-width: 1024px;
